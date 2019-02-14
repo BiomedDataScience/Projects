@@ -10,20 +10,11 @@ import pandas as pd
 import seaborn as sns
 import matplotlib.pyplot as plt
 %matplotlib inline
-import plotly.offline as py
-py.init_notebook_mode(connected=True)
-import plotly.graph_objs as go
-import plotly.tools as tls
-import plotly.figure_factory as ff
 from sklearn.model_selection import train_test_split
 from sklearn.model_selection import cross_val_score, GridSearchCV
 from sklearn import svm, metrics
 from sklearn.metrics import accuracy_score, roc_curve
 ```
-
-
-<script type="text/javascript">window.PlotlyConfig = {MathJaxConfig: 'local'};</script><script type="text/javascript">if (window.MathJax) {MathJax.Hub.Config({SVG: {font: "STIX-Web"}});}</script><script>requirejs.config({paths: { 'plotly': ['https://cdn.plot.ly/plotly-latest.min']},});if(!window._Plotly) {require(['plotly'],function(plotly) {window._Plotly=plotly;});}</script>
-
 
 We will load our dataset and drop our unneeded variables. We will remove the ID variable and Unnamed 32 as this column is completely missing. We will also change our diagnosis to a binary indicator instead of a string.
 
